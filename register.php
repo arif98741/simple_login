@@ -6,9 +6,9 @@ $message = [];
 
 if (isset($_POST['register'])) {
 
-	$name 		= $_POST['name'];
-	$username 	= $_POST['username'];
-	$password 	= $_POST['password'];
+	$name 		= validation(validation($_POST['name']));
+	$username 	= validation(validation($_POST['username']));
+	$password 	= validation(validation($_POST['password']));
 
 
 	if (empty($name)) {

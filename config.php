@@ -24,9 +24,19 @@ function connection() {
 	}
 	
 }
-date_default_timezone_set('Asia/Dhaka');
 
-// elseif(strlen($password) < 6){
-// 		array_push($message, '<p style="color: green; font-size: 15px;">Password must not be less then 6 characters');
-// 	}
+
+/*
+!-----------------------------------------------------
+!     Valiation
+!----------------------------------------------------
+*/
+function validation($data)
+{
+	$data = htmlspecialchars($data);
+	$data = trim($data);
+	$data = stripcslashes($data);
+	return $data;
+}
+
 ?>
